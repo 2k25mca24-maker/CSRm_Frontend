@@ -27,3 +27,4 @@ api.interceptors.request.use((config) => {
 export const errMsg = (e) => e.response?.data?.error || "Server error / backend not running";
 
 export default api;
+
