@@ -1,0 +1,429 @@
+/* =========================================================
+   ADMIN CONTAINER
+   ========================================================= */
+
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+
+/* =========================================================
+   DASHBOARD OVERVIEW
+   ========================================================= */
+
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.stat-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 1.25rem;
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  border-color: #dbe2ea;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.07);
+}
+
+
+/* =========================================================
+   STAT ICONS
+   ========================================================= */
+
+.stat-icon {
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+  font-size: 1.25rem;
+}
+
+.stat-icon.resources {
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.stat-icon.pending {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+.stat-icon.active {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+
+/* =========================================================
+   STAT INFORMATION
+   ========================================================= */
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.stat-info .stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111827;
+}
+
+.stat-info .stat-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+
+/* =========================================================
+   ADMIN CARD
+   ========================================================= */
+
+.admin-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  padding: 1.5rem;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.admin-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  padding-bottom: 1rem;
+
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.admin-card-header h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+
+  margin: 0;
+
+  font-size: 1.05rem;
+  font-weight: 650;
+  color: #111827;
+}
+
+.admin-card-header h3::before {
+  content: "";
+
+  width: 3px;
+  height: 18px;
+
+  display: inline-block;
+
+  background: #4f46e5;
+  border-radius: 999px;
+}
+
+
+/* =========================================================
+   FILTER / FORM BAR
+   ========================================================= */
+
+.admin-form-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+
+  padding: 0.75rem;
+
+  background: #f8fafc;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.admin-form-row input,
+.admin-form-row select {
+  flex: 1;
+  min-width: 150px;
+
+  height: 40px;
+  padding: 0 0.75rem;
+
+  background: #ffffff;
+
+  border: 1px solid #dbe1e8;
+  border-radius: 8px;
+
+  color: #111827;
+  font-size: 0.875rem;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.admin-form-row input:focus,
+.admin-form-row select:focus {
+  border-color: #818cf8;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+   ========================================================= */
+
+.btn-action-approve,
+.btn-action-reject,
+.btn-action-delete,
+.btn-action-cancel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 34px;
+  padding: 0.35rem 0.7rem;
+
+  border-radius: 7px;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+
+/* Approve */
+
+.btn-action-approve {
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+
+.btn-action-approve:hover {
+  background: #059669;
+  color: #ffffff;
+  border-color: #059669;
+}
+
+
+/* Reject */
+
+.btn-action-reject {
+  background: #fff7ed;
+  color: #c2410c;
+  border: 1px solid #fed7aa;
+}
+
+.btn-action-reject:hover {
+  background: #ea580c;
+  color: #ffffff;
+  border-color: #ea580c;
+}
+
+
+/* Delete / Cancel */
+
+.btn-action-delete,
+.btn-action-cancel {
+  background: #ffffff;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+
+.btn-action-delete:hover,
+.btn-action-cancel:hover {
+  background: #dc2626;
+  color: #ffffff;
+  border-color: #dc2626;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.btn-primary-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 40px;
+  padding: 0.55rem 1rem;
+
+  background: #4f46e5;
+  color: #ffffff;
+
+  border: 0;
+  border-radius: 8px;
+
+  font-size: 0.875rem;
+  font-weight: 600;
+
+  cursor: pointer;
+  white-space: nowrap;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn-primary-action:hover {
+  background: #4338ca;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(79, 70, 229, 0.18);
+}
+
+.btn-primary-action:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   ACTION BUTTON GROUP
+   ========================================================= */
+
+.action-btn-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.empty-table-msg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 140px;
+  padding: 2rem 1rem;
+
+  color: #6b7280;
+
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .admin-container {
+    gap: 1rem;
+  }
+
+  .admin-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-card {
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .admin-card-header {
+    align-items: flex-start;
+  }
+
+  .admin-form-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-form-row input,
+  .admin-form-row select {
+    width: 100%;
+  }
+
+  .btn-primary-action {
+    width: 100%;
+  }
+
+  .action-btn-group {
+    justify-content: flex-start;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .stat-card {
+    padding: 1rem;
+  }
+
+  .stat-icon {
+    flex-basis: 42px;
+    width: 42px;
+    height: 42px;
+    font-size: 1.1rem;
+  }
+
+  .stat-info .stat-value {
+    font-size: 1.35rem;
+  }
+
+  .admin-card-header h3 {
+    font-size: 1rem;
+  }
+}
